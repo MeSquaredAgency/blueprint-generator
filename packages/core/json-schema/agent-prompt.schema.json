@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "clientId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "clientName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "blueprintVersion": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991,
+      "description": "Ties every draft back to the SOPs that shaped it"
+    },
+    "compiledOn": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    },
+    "business": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Overview, services, team and who approves what — from the Blueprint"
+    },
+    "voice": {
+      "type": "object",
+      "properties": {
+        "greetings": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "signOffs": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "formality": {
+          "type": "string",
+          "enum": [
+            "formal",
+            "neutral",
+            "casual"
+          ]
+        },
+        "useWords": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "avoidWords": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "examples": {
+          "minItems": 3,
+          "maxItems": 5,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^(T-\\d{4,}|D-\\d{2,}( [ps][1-9]\\d*)?)$"
+                }
+              }
+            },
+            "required": [
+              "text",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "greetings",
+        "signOffs",
+        "formality",
+        "useWords",
+        "avoidWords",
+        "examples"
+      ],
+      "additionalProperties": false
+    },
+    "drafts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sopId": {
+            "type": "string",
+            "pattern": "^([A-Z]{2,5})-([A-Z]{2,4})-(\\d{3})$"
+          },
+          "trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "outputFormat": {
+            "type": "string",
+            "minLength": 1
+          },
+          "templateLink": {
+            "type": "string",
+            "minLength": 1
+          },
+          "qualityChecks": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "sopId",
+          "trigger",
+          "inputs",
+          "outputFormat",
+          "qualityChecks"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "complianceRules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Client-specific lines, e.g. licence number on all marketing"
+    },
+    "stopAndFlag": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Escalation list from the SOPs"
+    },
+    "glossary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "minLength": 1
+          },
+          "meaning": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "term",
+          "meaning"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "clientId",
+    "clientName",
+    "version",
+    "blueprintVersion",
+    "compiledOn",
+    "business",
+    "voice",
+    "drafts",
+    "complianceRules",
+    "stopAndFlag",
+    "glossary"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,37 @@
+{
+  "id": "HBP-SAL-001",
+  "title": "Follow up sent quotes",
+  "taskId": "TASK-009",
+  "trigger": "A quote sent from Xero has had no reply for 7 days",
+  "frequency": { "cadence": "per_event", "detail": "7 days after the quote is sent" },
+  "owner": "ai_role",
+  "contributors": ["operator", "client_retained"],
+  "systems": [
+    { "name": "Xero", "kind": "app" },
+    { "name": "accounts inbox", "kind": "login" }
+  ],
+  "inputs": [{ "item": "Quote number, customer and total for each quote with no reply after 7 days", "source": "Xero" }],
+  "outputs": [{ "item": "Follow-up email", "destination": "Sent from the accounts inbox to the customer" }],
+  "steps": [
+    { "n": 1, "actor": "ai_role", "action": "List quotes sent 7 or more days ago that have no reply", "system": "Xero", "evidence": ["T-0038"] },
+    { "n": 2, "actor": "ai_role", "action": "Draft a follow-up email for each quote", "evidence": ["T-0038"] },
+    { "n": 3, "actor": "operator", "action": "Review each draft and send it", "system": "accounts inbox", "evidence": "ASSUMED" }
+  ],
+  "decisionPoints": [
+    { "condition": "The quote is commercial and over $10,000", "action": "Don't draft an email; flag it to Dana to ring the customer", "evidence": ["T-0039"] }
+  ],
+  "qualityChecks": [
+    "Every quote with no reply after 7 days has either a sent follow-up email or a flag to Dana"
+  ],
+  "escalation": [
+    { "topic": "money", "when": "A customer asks for a discount or a change to the quoted price", "contact": "Dana Whitlock" },
+    { "topic": "legal", "when": "A customer asks about warranties or liability", "contact": "Dana Whitlock" },
+    { "topic": "complaints", "when": "A customer replies unhappy", "contact": "Dana Whitlock" }
+  ],
+  "templates": [],
+  "scoring": { "minutesPerRun": 5, "repeatability": 5, "manualTime": 2, "buildEffort": 2 },
+  "status": "draft",
+  "version": 1,
+  "versionDate": "2026-10-22",
+  "reviewBy": "2027-04-22"
+}

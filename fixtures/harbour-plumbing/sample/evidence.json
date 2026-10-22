@@ -1,0 +1,1178 @@
+{
+  "clientId": "harbour-plumbing",
+  "transcript": {
+    "path": "transcript/intake-2026-10-01.vtt",
+    "format": "vtt",
+    "sha256": "87a32f53318544a7dd48b4c6c3c46fcea8671fd848f82c2da0f3e6cf7ebf5cc0"
+  },
+  "documents": [
+    {
+      "id": "D-01",
+      "path": "documents/01-invoice-INV-2041.pdf",
+      "kind": "pdf",
+      "sha256": "8d361fcfc4770e2d788dcee76ce5b90e904528231bb1391b8bae14bd582b42eb"
+    },
+    {
+      "id": "D-02",
+      "path": "documents/02-invoice-INV-2047.pdf",
+      "kind": "pdf",
+      "sha256": "bf0537bb5283871fb90d5a98084bed96116613c04d70d629189568b8d41e5351"
+    },
+    {
+      "id": "D-03",
+      "path": "documents/03-invoice-INV-2052.pdf",
+      "kind": "pdf",
+      "sha256": "e9faa9b882efe5706b0552db77c0db8b21404cb0dd2719c47d94f557a203cca6"
+    },
+    {
+      "id": "D-04",
+      "path": "documents/04-email-invoice-INV-2041.eml",
+      "kind": "eml",
+      "sha256": "6549defd831dd8191126a8c8b18792d309abad619274c57e3972029a6a5bf394"
+    },
+    {
+      "id": "D-05",
+      "path": "documents/05-email-reminder-INV-2032.eml",
+      "kind": "eml",
+      "sha256": "bbbf8063e8990f5d0aa0081017c387ad9c5e91e141fff39a18038397edac59ce"
+    },
+    {
+      "id": "D-06",
+      "path": "documents/06-email-work-order-WO-55812.eml",
+      "kind": "eml",
+      "sha256": "797f59042ef31a3778508fe84ddaa3970cc0e6763567a52f1b092b105f846210"
+    },
+    {
+      "id": "D-07",
+      "path": "documents/07-email-receipts-2026-09.eml",
+      "kind": "eml",
+      "sha256": "646cbcee48bd5f6187908af4a440270af9781bdf91b0f2ab9762f77457f49ffa"
+    },
+    {
+      "id": "D-08",
+      "path": "documents/08-email-dispute-INV-2039.eml",
+      "kind": "eml",
+      "sha256": "d77bc922fc27913dd736c6d1867fc70b5446100ffd75fa982c4abd7accdb5d6a"
+    },
+    {
+      "id": "D-09",
+      "path": "documents/09-rates-and-timesheet.xlsx",
+      "kind": "xlsx",
+      "sha256": "4bfaa84e1899654a893d883e93b5ac1a8cad4e365c1829619450d5dca6a3b347"
+    }
+  ],
+  "redaction": "not_started",
+  "items": [
+    {
+      "kind": "transcript_segment",
+      "id": "T-0001",
+      "speaker": "Interviewer",
+      "start": "00:00:04.000",
+      "end": "00:00:17.860",
+      "text": "Before we start, this call is being recorded so we can write up how the business runs. The recording is only used by Me² for that. Are you both happy to go ahead?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0002",
+      "speaker": "Dana Whitlock",
+      "start": "00:00:19.360",
+      "end": "00:00:21.360",
+      "text": "Yep, all good."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0003",
+      "speaker": "Priya Raman",
+      "start": "00:00:22.860",
+      "end": "00:00:24.860",
+      "text": "Yes, that's fine."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0004",
+      "speaker": "Interviewer",
+      "start": "00:00:26.360",
+      "end": "00:00:30.560",
+      "text": "Great. Dana, give me the thirty-second version of the business."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0005",
+      "speaker": "Dana Whitlock",
+      "start": "00:00:32.060",
+      "end": "00:00:47.180",
+      "text": "Harbour Plumbing and Gas. Mostly residential, some strata work, and a fair bit for real estate agents, maintenance on rentals. It's me, three techs and an apprentice, and Priya runs the office three days a week."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0006",
+      "speaker": "Interviewer",
+      "start": "00:00:48.680",
+      "end": "00:00:53.720",
+      "text": "Let's start with money coming in. What happens when a job's finished?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0007",
+      "speaker": "Dana Whitlock",
+      "start": "00:00:55.220",
+      "end": "00:01:02.780",
+      "text": "The tech closes the job in JobLog on their phone. Photos, parts used, hours. Then Priya invoices it."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0008",
+      "speaker": "Priya Raman",
+      "start": "00:01:04.280",
+      "end": "00:01:25.280",
+      "text": "Usually the next morning. I open the completed jobs list in JobLog and for each one I create the invoice in Xero. Parts come off the job sheet, and I price them from the price list spreadsheet, not from what the tech typed, because they never put the markup on."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0009",
+      "speaker": "Interviewer",
+      "start": "00:01:26.780",
+      "end": "00:01:28.780",
+      "text": "And labour?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0010",
+      "speaker": "Priya Raman",
+      "start": "00:01:30.280",
+      "end": "00:01:40.360",
+      "text": "Call-out fee plus hours at the standard rate. After hours is a different call-out fee, that's on the price list as its own line."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0011",
+      "speaker": "Priya Raman",
+      "start": "00:01:41.860",
+      "end": "00:01:51.100",
+      "text": "Then I email it from the accounts inbox. Same wording every time, there's a template in Xero. Payment terms are fourteen days."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0012",
+      "speaker": "Dana Whitlock",
+      "start": "00:01:52.600",
+      "end": "00:02:06.040",
+      "text": "Unless it's an agency job. Then the invoice goes to the agency, not the tenant, and it has to have their work order number on it or they just bounce it back."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0013",
+      "speaker": "Priya Raman",
+      "start": "00:02:07.540",
+      "end": "00:02:23.080",
+      "text": "And strata want the strata plan number in the reference. Except when it's an emergency call-out, sometimes there's no work order yet, so I email the property manager and ask for one before I send the invoice."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0014",
+      "speaker": "Interviewer",
+      "start": "00:02:24.580",
+      "end": "00:02:27.100",
+      "text": "How long does invoicing take you?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0015",
+      "speaker": "Priya Raman",
+      "start": "00:02:28.600",
+      "end": "00:02:42.040",
+      "text": "Five to ten minutes a job if the job sheet's complete. If the tech hasn't put the parts in I have to ring them, and that can hold it up a day."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0016",
+      "speaker": "Interviewer",
+      "start": "00:02:43.540",
+      "end": "00:02:46.060",
+      "text": "What happens if someone doesn't pay?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0017",
+      "speaker": "Priya Raman",
+      "start": "00:02:47.560",
+      "end": "00:02:57.640",
+      "text": "Every Monday I run the aged receivables report in Xero. Anything a week overdue gets a friendly reminder email. I've got a standard one."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0018",
+      "speaker": "Priya Raman",
+      "start": "00:02:59.140",
+      "end": "00:03:03.760",
+      "text": "At thirty days I ring them. Most people have just forgotten."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0019",
+      "speaker": "Dana Whitlock",
+      "start": "00:03:05.260",
+      "end": "00:03:19.540",
+      "text": "And anything over two thousand dollars that's more than forty-five days overdue comes to me. I decide whether it goes to the debt collector or I ring them myself. Priya doesn't make that call."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0020",
+      "speaker": "Interviewer",
+      "start": "00:03:21.040",
+      "end": "00:03:23.560",
+      "text": "Does anyone ever dispute an invoice?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0021",
+      "speaker": "Dana Whitlock",
+      "start": "00:03:25.060",
+      "end": "00:03:38.080",
+      "text": "Now and then. If someone's unhappy with the bill, that comes straight to me. I'd rather sort it out on the phone than have it go back and forth on email."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0022",
+      "speaker": "Interviewer",
+      "start": "00:05:14.580",
+      "end": "00:05:17.940",
+      "text": "OK. Wages. How do the techs get paid?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0023",
+      "speaker": "Priya Raman",
+      "start": "00:05:19.440",
+      "end": "00:05:30.360",
+      "text": "They fill in the timesheet tab in the spreadsheet by Monday morning. Start, finish, breaks. The sheet works out the hours and any overtime over thirty-eight."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0024",
+      "speaker": "Priya Raman",
+      "start": "00:05:31.860",
+      "end": "00:05:42.360",
+      "text": "I compare the hours against the jobs in JobLog, because sometimes the timesheet says eight hours and JobLog says they were on site for five."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0025",
+      "speaker": "Priya Raman",
+      "start": "00:05:43.860",
+      "end": "00:05:51.420",
+      "text": "Then I put the pay run into Xero on Tuesday and Dana approves it in the Xero app."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0026",
+      "speaker": "Dana Whitlock",
+      "start": "00:05:52.920",
+      "end": "00:06:06.360",
+      "text": "Pay day is Wednesday. If the timesheet and JobLog are more than an hour apart for anyone, Priya flags it to me before the pay run and I talk to the tech."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0027",
+      "speaker": "Interviewer",
+      "start": "00:06:07.860",
+      "end": "00:06:09.860",
+      "text": "What about the apprentice?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0028",
+      "speaker": "Priya Raman",
+      "start": "00:06:11.360",
+      "end": "00:06:22.700",
+      "text": "Same, except the apprentice has TAFE days. Those are paid but they're not in JobLog, so they look like gaps. I just know which days those are."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0029",
+      "speaker": "Interviewer",
+      "start": "00:06:24.200",
+      "end": "00:06:26.300",
+      "text": "Got it. Suppliers, ordering parts?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0030",
+      "speaker": "Dana Whitlock",
+      "start": "00:06:27.800",
+      "end": "00:06:48.380",
+      "text": "Most of it's on account with Coastline Plumbing Supplies. The techs pick up on account and the bills come in at the end of the month. Priya matches them to jobs. Honestly that one's a bit of a mess, we'd have to walk you through it properly another time."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0031",
+      "speaker": "Interviewer",
+      "start": "00:06:49.880",
+      "end": "00:06:54.500",
+      "text": "That's fine, I'll put it on the list for next time."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0032",
+      "speaker": "Interviewer",
+      "start": "00:08:31.000",
+      "end": "00:08:33.000",
+      "text": "Anything that happens monthly?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0033",
+      "speaker": "Priya Raman",
+      "start": "00:08:34.500",
+      "end": "00:08:52.140",
+      "text": "End of each month I put all the receipts and supplier bills into the Receipts folder in Google Drive, one folder per month, and I email Sam, our bookkeeper, to say it's ready. Sam does the reconciliation, and the BAS every quarter."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0034",
+      "speaker": "Dana Whitlock",
+      "start": "00:08:53.640",
+      "end": "00:09:02.880",
+      "text": "Sam prepares the BAS, yeah. But I sign it off. Nothing gets lodged with the tax office without me looking at it."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0035",
+      "speaker": "Interviewer",
+      "start": "00:09:04.380",
+      "end": "00:09:06.900",
+      "text": "And the gas side? Compliance certificates?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0036",
+      "speaker": "Dana Whitlock",
+      "start": "00:09:08.400",
+      "end": "00:09:18.060",
+      "text": "I do the certificates myself after any gas job. There's a deadline to lodge them. I'd rather go through that separately, it's fiddly."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0037",
+      "speaker": "Interviewer",
+      "start": "00:09:19.560",
+      "end": "00:09:21.560",
+      "text": "Sure. What about quotes?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0038",
+      "speaker": "Priya Raman",
+      "start": "00:09:23.060",
+      "end": "00:09:31.460",
+      "text": "Quotes go out from Xero as well. If we haven't heard back in a week, I send a follow-up email."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0039",
+      "speaker": "Dana Whitlock",
+      "start": "00:09:32.960",
+      "end": "00:09:38.840",
+      "text": "Unless it's a big commercial one, anything over ten thousand. Those I ring myself."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0040",
+      "speaker": "Interviewer",
+      "start": "00:09:40.340",
+      "end": "00:09:42.860",
+      "text": "Anything yearly I should know about?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0041",
+      "speaker": "Dana Whitlock",
+      "start": "00:09:44.360",
+      "end": "00:09:51.080",
+      "text": "Licence and insurance renewals. Public liability, the vans. Priya's got a calendar for it, I think."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0042",
+      "speaker": "Priya Raman",
+      "start": "00:09:52.580",
+      "end": "00:09:55.520",
+      "text": "Sort of. It's mostly in my head."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0043",
+      "speaker": "Interviewer",
+      "start": "00:09:57.020",
+      "end": "00:10:00.380",
+      "text": "How's the weather been down at the port?"
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0044",
+      "speaker": "Dana Whitlock",
+      "start": "00:10:01.880",
+      "end": "00:10:03.880",
+      "text": "Windy. Always windy."
+    },
+    {
+      "kind": "transcript_segment",
+      "id": "T-0045",
+      "speaker": "Interviewer",
+      "start": "00:10:05.380",
+      "end": "00:10:10.840",
+      "text": "Thanks, both. I'll send through a list of what we didn't get to."
+    },
+    {
+      "kind": "document_page",
+      "id": "D-01 p1",
+      "documentId": "D-01",
+      "page": 1,
+      "text": "HARBOUR PLUMBING & GAS\nFictional business for testing - ABN 00 000 000 000\n12 Quay Street, Port Halyard SA 5999\n(08) 5550 1234 - accounts@harbourplumbing.example\n\nTAX INVOICE INV-2041\nInvoice date: 23 September 2026\nDue date: 30 September 2026\nBill to:\nMark Ellison\n14 Wharf Street, Port Halyard SA 5999\nJob: JL-3310 Hot water service - replace tempering valve\nReference: JL-3310\nCode\n\nDescription\n\nCALL-STD Standard call-out fee\nLAB-STD Labour (hours)\nPL-TV15 Tempering valve 15mm\n\nQty\n\nUnit ex GST\n1\n\n1.5\n1\n\nAmount ex GST\n\n95.00\n\n95.00\n\n110.00\n\n165.00\n\n115.00\n\n115.00\n\nSubtotal ex GST: $375.00\nGST: $37.50\nTotal inc GST: $412.50\nPayment terms: payment due within 7 days of invoice date.\nPay by EFT: Harbour Plumbing & Gas, BSB 999-001, Account 1234 5678, reference INV-2041.\nQuestions about this invoice? Call (08) 5550 1234."
+    },
+    {
+      "kind": "document_page",
+      "id": "D-02 p1",
+      "documentId": "D-02",
+      "page": 1,
+      "text": "HARBOUR PLUMBING & GAS\nFictional business for testing - ABN 00 000 000 000\n12 Quay Street, Port Halyard SA 5999\n(08) 5550 1234 - accounts@harbourplumbing.example\n\nTAX INVOICE INV-2047\nInvoice date: 25 September 2026\nDue date: 2 October 2026\nBill to:\nTidewater Realty (agent for owner)\naccounts@tidewater-realty.example\nProperty: 7/22 Dock Road, Port Halyard SA 5999\nJob: JL-3318 Leaking kitchen mixer tap\nReference: Work order WO-55812\nCode\n\nDescription\n\nQty\n\nCALL-STD Standard call-out fee\n\nUnit ex GST\n1\n\n95.00\n\nAmount ex GST\n95.00\n\nLAB-STD Labour (hours)\n\n1\n\n110.00\n\n110.00\n\nPL-TW01 Tap washer kit\n\n1\n\n18.00\n\n18.00\n\nSubtotal ex GST: $223.00\nGST: $22.30\nTotal inc GST: $245.30\nPayment terms: payment due within 7 days of invoice date.\nPay by EFT: Harbour Plumbing & Gas, BSB 999-001, Account 1234 5678, reference INV-2047.\nQuestions about this invoice? Call (08) 5550 1234."
+    },
+    {
+      "kind": "document_page",
+      "id": "D-03 p1",
+      "documentId": "D-03",
+      "page": 1,
+      "text": "HARBOUR PLUMBING & GAS\nFictional business for testing - ABN 00 000 000 000\n12 Quay Street, Port Halyard SA 5999\n(08) 5550 1234 - accounts@harbourplumbing.example\n\nTAX INVOICE INV-2052\nInvoice date: 29 September 2026\nDue date: 6 October 2026\nBill to:\nOwners Corporation SP 23456\nc/- Anchor Strata Management\n3 Mast Lane, Port Halyard SA 5999\nJob: JL-3324 Blocked stormwater - common property (after hours)\nReference: SP 23456\nCode\n\nDescription\n\nQty\n\nCALL-AH After-hours call-out fee\nLAB-STD Labour (hours)\nPL-DC01 Drain camera inspection\n\nUnit ex GST\n1\n\n165.00\n\n2\n\n110.00\n1\n\n150.00\n\nAmount ex GST\n165.00\n220.00\n150.00\n\nSubtotal ex GST: $535.00\nGST: $53.50\nTotal inc GST: $588.50\nPayment terms: payment due within 7 days of invoice date.\nPay by EFT: Harbour Plumbing & Gas, BSB 999-001, Account 1234 5678, reference INV-2052.\nQuestions about this invoice? Call (08) 5550 1234."
+    },
+    {
+      "kind": "email",
+      "id": "D-04",
+      "documentId": "D-04",
+      "from": "Priya Raman <accounts@harbourplumbing.example>",
+      "to": [
+        "Mark Ellison <mark.ellison@mail.example>"
+      ],
+      "date": "2026-09-23T09:12:00+09:30",
+      "subject": "Invoice INV-2041 from Harbour Plumbing & Gas",
+      "text": "Hi Mark,\n\nThanks for having us out on Tuesday. Please find attached invoice INV-2041 for $412.50 (inc GST) for the hot water service repair at 14 Wharf Street.\n\nPayment is due by 30 September. Bank details are on the invoice.\n\nAny questions, just give me a call on (08) 5550 1234.\n\nCheers,\nPriya\nHarbour Plumbing & Gas"
+    },
+    {
+      "kind": "email",
+      "id": "D-05",
+      "documentId": "D-05",
+      "from": "Priya Raman <accounts@harbourplumbing.example>",
+      "to": [
+        "Joan Petrakis <joan.p@mail.example>"
+      ],
+      "date": "2026-09-28T08:47:00+09:30",
+      "subject": "Friendly reminder: invoice INV-2032",
+      "text": "Hi Joan,\n\nJust a friendly reminder that invoice INV-2032 for $286.00 was due on 21 September and is now a week overdue. I've attached a copy in case it got lost.\n\nIf you've already paid, please ignore this, and thank you!\n\nCheers,\nPriya\nHarbour Plumbing & Gas"
+    },
+    {
+      "kind": "email",
+      "id": "D-06",
+      "documentId": "D-06",
+      "from": "Leah Morgan <leah.morgan@tidewater-realty.example>",
+      "to": [
+        "Harbour Plumbing & Gas <accounts@harbourplumbing.example>"
+      ],
+      "date": "2026-09-24T14:05:00+09:30",
+      "subject": "Work order WO-55812 - 7/22 Dock Road",
+      "text": "Hi team,\n\nPlease attend 7/22 Dock Road for a leaking kitchen mixer tap. The tenant is home after 10am weekdays; please call them on 0491 570 156 to arrange access.\n\nPlease quote WO-55812 on your invoice and send it to accounts@tidewater-realty.example, not to the tenant. Approval limit for this job is $400 inc GST; call me before going over.\n\nThanks,\nLeah Morgan\nProperty Manager, Tidewater Realty"
+    },
+    {
+      "kind": "email",
+      "id": "D-07",
+      "documentId": "D-07",
+      "from": "Priya Raman <accounts@harbourplumbing.example>",
+      "to": [
+        "Sam Okafor <sam@ledgerline-bookkeeping.example>"
+      ],
+      "date": "2026-09-30T16:30:00+09:30",
+      "subject": "September receipts are ready",
+      "text": "Hi Sam,\n\nSeptember's receipts and the Coastline bills are in the Receipts/2026-09 folder in Drive. There are two Coastline bills I couldn't match to jobs, so I've put them in a subfolder called 'unmatched'.\n\nCheers,\nPriya\nHarbour Plumbing & Gas"
+    },
+    {
+      "kind": "email",
+      "id": "D-08",
+      "documentId": "D-08",
+      "from": "Dana Whitlock <dana@harbourplumbing.example>",
+      "to": [
+        "Robert Vance <rvance@mail.example>"
+      ],
+      "date": "2026-09-25T11:20:00+09:30",
+      "subject": "Re: Invoice INV-2039",
+      "text": "Hi Robert,\n\nThanks for letting me know. I've looked at invoice INV-2039 and I can see why the labour line looks high. I'll give you a call this afternoon to go through it, and if we've got it wrong we'll fix it.\n\nRegards,\nDana Whitlock\nHarbour Plumbing & Gas\n\n> On Thu, 24 Sep 2026, Robert Vance wrote:\n> I've just got your invoice for the toilet repair and $640 seems a lot for an hour's work. Can someone explain the charges?"
+    },
+    {
+      "kind": "spreadsheet_sheet",
+      "id": "D-09 s1",
+      "documentId": "D-09",
+      "sheet": 1,
+      "sheetName": "Price List",
+      "headers": [
+        "Code",
+        "Description",
+        "Cost ex GST",
+        "Markup",
+        "Sell ex GST",
+        "Sell inc GST"
+      ],
+      "cells": [
+        {
+          "ref": "A1",
+          "value": "Code"
+        },
+        {
+          "ref": "B1",
+          "value": "Description"
+        },
+        {
+          "ref": "C1",
+          "value": "Cost ex GST"
+        },
+        {
+          "ref": "D1",
+          "value": "Markup"
+        },
+        {
+          "ref": "E1",
+          "value": "Sell ex GST"
+        },
+        {
+          "ref": "F1",
+          "value": "Sell inc GST"
+        },
+        {
+          "ref": "A2",
+          "value": "CALL-STD"
+        },
+        {
+          "ref": "B2",
+          "value": "Standard call-out fee"
+        },
+        {
+          "ref": "C2",
+          "value": 95
+        },
+        {
+          "ref": "D2",
+          "value": 0
+        },
+        {
+          "ref": "E2",
+          "value": 95,
+          "formula": "=ROUND(C2*(1+D2),2)"
+        },
+        {
+          "ref": "F2",
+          "value": 104.5,
+          "formula": "=ROUND(E2*1.1,2)"
+        },
+        {
+          "ref": "A3",
+          "value": "CALL-AH"
+        },
+        {
+          "ref": "B3",
+          "value": "After-hours call-out fee"
+        },
+        {
+          "ref": "C3",
+          "value": 165
+        },
+        {
+          "ref": "D3",
+          "value": 0
+        },
+        {
+          "ref": "E3",
+          "value": 165,
+          "formula": "=ROUND(C3*(1+D3),2)"
+        },
+        {
+          "ref": "F3",
+          "value": 181.5,
+          "formula": "=ROUND(E3*1.1,2)"
+        },
+        {
+          "ref": "A4",
+          "value": "LAB-STD"
+        },
+        {
+          "ref": "B4",
+          "value": "Labour per hour"
+        },
+        {
+          "ref": "C4",
+          "value": 110
+        },
+        {
+          "ref": "D4",
+          "value": 0
+        },
+        {
+          "ref": "E4",
+          "value": 110,
+          "formula": "=ROUND(C4*(1+D4),2)"
+        },
+        {
+          "ref": "F4",
+          "value": 121,
+          "formula": "=ROUND(E4*1.1,2)"
+        },
+        {
+          "ref": "A5",
+          "value": "PL-TV15"
+        },
+        {
+          "ref": "B5",
+          "value": "Tempering valve 15mm"
+        },
+        {
+          "ref": "C5",
+          "value": 92
+        },
+        {
+          "ref": "D5",
+          "value": 0.25
+        },
+        {
+          "ref": "E5",
+          "value": 115,
+          "formula": "=ROUND(C5*(1+D5),2)"
+        },
+        {
+          "ref": "F5",
+          "value": 126.5,
+          "formula": "=ROUND(E5*1.1,2)"
+        },
+        {
+          "ref": "A6",
+          "value": "PL-TW01"
+        },
+        {
+          "ref": "B6",
+          "value": "Tap washer kit"
+        },
+        {
+          "ref": "C6",
+          "value": 12
+        },
+        {
+          "ref": "D6",
+          "value": 0.5
+        },
+        {
+          "ref": "E6",
+          "value": 18,
+          "formula": "=ROUND(C6*(1+D6),2)"
+        },
+        {
+          "ref": "F6",
+          "value": 19.8,
+          "formula": "=ROUND(E6*1.1,2)"
+        },
+        {
+          "ref": "A7",
+          "value": "PL-DC01"
+        },
+        {
+          "ref": "B7",
+          "value": "Drain camera inspection"
+        },
+        {
+          "ref": "C7",
+          "value": 150
+        },
+        {
+          "ref": "D7",
+          "value": 0
+        },
+        {
+          "ref": "E7",
+          "value": 150,
+          "formula": "=ROUND(C7*(1+D7),2)"
+        },
+        {
+          "ref": "F7",
+          "value": 165,
+          "formula": "=ROUND(E7*1.1,2)"
+        }
+      ]
+    },
+    {
+      "kind": "spreadsheet_sheet",
+      "id": "D-09 s2",
+      "documentId": "D-09",
+      "sheet": 2,
+      "sheetName": "Timesheet",
+      "headers": [
+        "Tech",
+        "Date",
+        "Start",
+        "Finish",
+        "Break (h)",
+        "Hours",
+        "Tech",
+        "Total hours",
+        "Overtime over 38"
+      ],
+      "cells": [
+        {
+          "ref": "A1",
+          "value": "Tech"
+        },
+        {
+          "ref": "B1",
+          "value": "Date"
+        },
+        {
+          "ref": "C1",
+          "value": "Start"
+        },
+        {
+          "ref": "D1",
+          "value": "Finish"
+        },
+        {
+          "ref": "E1",
+          "value": "Break (h)"
+        },
+        {
+          "ref": "F1",
+          "value": "Hours"
+        },
+        {
+          "ref": "H1",
+          "value": "Tech"
+        },
+        {
+          "ref": "I1",
+          "value": "Total hours"
+        },
+        {
+          "ref": "J1",
+          "value": "Overtime over 38"
+        },
+        {
+          "ref": "A2",
+          "value": "Tom Bridges"
+        },
+        {
+          "ref": "B2",
+          "value": "2026-09-21"
+        },
+        {
+          "ref": "C2",
+          "value": "07:00"
+        },
+        {
+          "ref": "D2",
+          "value": "16:30"
+        },
+        {
+          "ref": "E2",
+          "value": 0.5
+        },
+        {
+          "ref": "F2",
+          "value": 9,
+          "formula": "=ROUND((D2-C2)*24-E2,2)"
+        },
+        {
+          "ref": "H2",
+          "value": "Tom Bridges"
+        },
+        {
+          "ref": "I2",
+          "value": 45,
+          "formula": "=SUMIF($A$2:$A$16,H2,$F$2:$F$16)"
+        },
+        {
+          "ref": "J2",
+          "value": 7,
+          "formula": "=MAX(0,I2-38)"
+        },
+        {
+          "ref": "A3",
+          "value": "Tom Bridges"
+        },
+        {
+          "ref": "B3",
+          "value": "2026-09-22"
+        },
+        {
+          "ref": "C3",
+          "value": "07:00"
+        },
+        {
+          "ref": "D3",
+          "value": "16:30"
+        },
+        {
+          "ref": "E3",
+          "value": 0.5
+        },
+        {
+          "ref": "F3",
+          "value": 9,
+          "formula": "=ROUND((D3-C3)*24-E3,2)"
+        },
+        {
+          "ref": "H3",
+          "value": "Aisha Karimi"
+        },
+        {
+          "ref": "I3",
+          "value": 42.5,
+          "formula": "=SUMIF($A$2:$A$16,H3,$F$2:$F$16)"
+        },
+        {
+          "ref": "J3",
+          "value": 4.5,
+          "formula": "=MAX(0,I3-38)"
+        },
+        {
+          "ref": "A4",
+          "value": "Tom Bridges"
+        },
+        {
+          "ref": "B4",
+          "value": "2026-09-23"
+        },
+        {
+          "ref": "C4",
+          "value": "07:00"
+        },
+        {
+          "ref": "D4",
+          "value": "16:30"
+        },
+        {
+          "ref": "E4",
+          "value": 0.5
+        },
+        {
+          "ref": "F4",
+          "value": 9,
+          "formula": "=ROUND((D4-C4)*24-E4,2)"
+        },
+        {
+          "ref": "H4",
+          "value": "Jordan Lee (apprentice)"
+        },
+        {
+          "ref": "I4",
+          "value": 39,
+          "formula": "=SUMIF($A$2:$A$16,H4,$F$2:$F$16)"
+        },
+        {
+          "ref": "J4",
+          "value": 1,
+          "formula": "=MAX(0,I4-38)"
+        },
+        {
+          "ref": "A5",
+          "value": "Tom Bridges"
+        },
+        {
+          "ref": "B5",
+          "value": "2026-09-24"
+        },
+        {
+          "ref": "C5",
+          "value": "07:00"
+        },
+        {
+          "ref": "D5",
+          "value": "16:30"
+        },
+        {
+          "ref": "E5",
+          "value": 0.5
+        },
+        {
+          "ref": "F5",
+          "value": 9,
+          "formula": "=ROUND((D5-C5)*24-E5,2)"
+        },
+        {
+          "ref": "A6",
+          "value": "Tom Bridges"
+        },
+        {
+          "ref": "B6",
+          "value": "2026-09-25"
+        },
+        {
+          "ref": "C6",
+          "value": "07:00"
+        },
+        {
+          "ref": "D6",
+          "value": "16:30"
+        },
+        {
+          "ref": "E6",
+          "value": 0.5
+        },
+        {
+          "ref": "F6",
+          "value": 9,
+          "formula": "=ROUND((D6-C6)*24-E6,2)"
+        },
+        {
+          "ref": "A7",
+          "value": "Aisha Karimi"
+        },
+        {
+          "ref": "B7",
+          "value": "2026-09-21"
+        },
+        {
+          "ref": "C7",
+          "value": "07:00"
+        },
+        {
+          "ref": "D7",
+          "value": "15:30"
+        },
+        {
+          "ref": "E7",
+          "value": 0.5
+        },
+        {
+          "ref": "F7",
+          "value": 8,
+          "formula": "=ROUND((D7-C7)*24-E7,2)"
+        },
+        {
+          "ref": "A8",
+          "value": "Aisha Karimi"
+        },
+        {
+          "ref": "B8",
+          "value": "2026-09-22"
+        },
+        {
+          "ref": "C8",
+          "value": "07:00"
+        },
+        {
+          "ref": "D8",
+          "value": "17:00"
+        },
+        {
+          "ref": "E8",
+          "value": 0.5
+        },
+        {
+          "ref": "F8",
+          "value": 9.5,
+          "formula": "=ROUND((D8-C8)*24-E8,2)"
+        },
+        {
+          "ref": "A9",
+          "value": "Aisha Karimi"
+        },
+        {
+          "ref": "B9",
+          "value": "2026-09-23"
+        },
+        {
+          "ref": "C9",
+          "value": "07:00"
+        },
+        {
+          "ref": "D9",
+          "value": "15:30"
+        },
+        {
+          "ref": "E9",
+          "value": 0.5
+        },
+        {
+          "ref": "F9",
+          "value": 8,
+          "formula": "=ROUND((D9-C9)*24-E9,2)"
+        },
+        {
+          "ref": "A10",
+          "value": "Aisha Karimi"
+        },
+        {
+          "ref": "B10",
+          "value": "2026-09-24"
+        },
+        {
+          "ref": "C10",
+          "value": "06:30"
+        },
+        {
+          "ref": "D10",
+          "value": "16:00"
+        },
+        {
+          "ref": "E10",
+          "value": 0.5
+        },
+        {
+          "ref": "F10",
+          "value": 9,
+          "formula": "=ROUND((D10-C10)*24-E10,2)"
+        },
+        {
+          "ref": "A11",
+          "value": "Aisha Karimi"
+        },
+        {
+          "ref": "B11",
+          "value": "2026-09-25"
+        },
+        {
+          "ref": "C11",
+          "value": "07:00"
+        },
+        {
+          "ref": "D11",
+          "value": "15:30"
+        },
+        {
+          "ref": "E11",
+          "value": 0.5
+        },
+        {
+          "ref": "F11",
+          "value": 8,
+          "formula": "=ROUND((D11-C11)*24-E11,2)"
+        },
+        {
+          "ref": "A12",
+          "value": "Jordan Lee (apprentice)"
+        },
+        {
+          "ref": "B12",
+          "value": "2026-09-21"
+        },
+        {
+          "ref": "C12",
+          "value": "07:00"
+        },
+        {
+          "ref": "D12",
+          "value": "15:30"
+        },
+        {
+          "ref": "E12",
+          "value": 0.5
+        },
+        {
+          "ref": "F12",
+          "value": 8,
+          "formula": "=ROUND((D12-C12)*24-E12,2)"
+        },
+        {
+          "ref": "A13",
+          "value": "Jordan Lee (apprentice)"
+        },
+        {
+          "ref": "B13",
+          "value": "2026-09-22"
+        },
+        {
+          "ref": "C13",
+          "value": "07:00"
+        },
+        {
+          "ref": "D13",
+          "value": "15:30"
+        },
+        {
+          "ref": "E13",
+          "value": 0.5
+        },
+        {
+          "ref": "F13",
+          "value": 8,
+          "formula": "=ROUND((D13-C13)*24-E13,2)"
+        },
+        {
+          "ref": "A14",
+          "value": "Jordan Lee (apprentice)"
+        },
+        {
+          "ref": "B14",
+          "value": "2026-09-23"
+        },
+        {
+          "ref": "C14",
+          "value": "08:00"
+        },
+        {
+          "ref": "D14",
+          "value": "15:30"
+        },
+        {
+          "ref": "E14",
+          "value": 0.5
+        },
+        {
+          "ref": "F14",
+          "value": 7,
+          "formula": "=ROUND((D14-C14)*24-E14,2)"
+        },
+        {
+          "ref": "A15",
+          "value": "Jordan Lee (apprentice)"
+        },
+        {
+          "ref": "B15",
+          "value": "2026-09-24"
+        },
+        {
+          "ref": "C15",
+          "value": "07:00"
+        },
+        {
+          "ref": "D15",
+          "value": "15:30"
+        },
+        {
+          "ref": "E15",
+          "value": 0.5
+        },
+        {
+          "ref": "F15",
+          "value": 8,
+          "formula": "=ROUND((D15-C15)*24-E15,2)"
+        },
+        {
+          "ref": "A16",
+          "value": "Jordan Lee (apprentice)"
+        },
+        {
+          "ref": "B16",
+          "value": "2026-09-25"
+        },
+        {
+          "ref": "C16",
+          "value": "07:00"
+        },
+        {
+          "ref": "D16",
+          "value": "15:30"
+        },
+        {
+          "ref": "E16",
+          "value": 0.5
+        },
+        {
+          "ref": "F16",
+          "value": 8,
+          "formula": "=ROUND((D16-C16)*24-E16,2)"
+        }
+      ]
+    }
+  ]
+}

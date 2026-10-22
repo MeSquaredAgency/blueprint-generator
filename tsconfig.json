@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2023",
+    "lib": ["es2023"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "types": []
+  },
+  // Only code that runs without Node globals is type-checked for now. Tests and
+  // scripts run through Node's built-in type stripping; checking them needs
+  // @types/node, which the plan doesn't name (see CLAUDE.md).
+  "include": ["packages/*/src/**/*.ts", "apps/*/src/**/*.ts"]
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "clientId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "clientName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "clientPrefix": {
+      "type": "string",
+      "pattern": "^[A-Z]{2,5}$"
+    },
+    "industry": {
+      "type": "string",
+      "minLength": 1
+    },
+    "servicesBought": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "teamSize": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "ACT",
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ]
+    }
+  },
+  "required": [
+    "clientId",
+    "clientName",
+    "clientPrefix",
+    "industry",
+    "servicesBought",
+    "teamSize",
+    "state"
+  ],
+  "additionalProperties": false
+}

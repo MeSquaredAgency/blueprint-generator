@@ -1,0 +1,9 @@
+{
+  "clientId": "harbour-plumbing",
+  "clientName": "Harbour Plumbing & Gas",
+  "clientPrefix": "HBP",
+  "industry": "Trades: residential and strata plumbing and gasfitting",
+  "servicesBought": ["Accounts receivable", "Payroll preparation", "Bookkeeper liaison", "Customer email drafting"],
+  "teamSize": 6,
+  "state": "SA"
+}

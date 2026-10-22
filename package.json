@@ -13,9 +13,12 @@
     "typecheck": "tsc -p tsconfig.json",
     "test": "node --test \"packages/*/test/**/*.test.ts\"",
     "schemas:export": "node packages/core/scripts/export-json-schema.ts",
-    "check": "npm run typecheck && npm test"
+    "check": "npm run typecheck && npm test",
+    "blueprint": "node apps/cli/src/main.ts",
+    "fixture:evidence": "node packages/core/scripts/write-sample-evidence.ts"
   },
   "devDependencies": {
+    "@types/node": "22.20.5",
     "typescript": "7.0.2"
   }
 }

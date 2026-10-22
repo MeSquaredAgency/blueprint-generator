@@ -1,0 +1,21 @@
+{
+  "name": "me2-blueprint",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test \"packages/*/test/**/*.test.ts\"",
+    "schemas:export": "node packages/core/scripts/export-json-schema.ts",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  }
+}

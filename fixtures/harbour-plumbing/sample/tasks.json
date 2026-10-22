@@ -1,0 +1,125 @@
+{
+  "clientId": "harbour-plumbing",
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "name": "Invoice completed jobs",
+      "trigger": "A tech closes a job in JobLog",
+      "frequency": { "cadence": "per_event", "detail": "Usually the morning after the job is closed" },
+      "currentOwner": "Priya Raman (office manager)",
+      "systems": ["JobLog", "Xero", "price list spreadsheet", "accounts inbox"],
+      "inputs": ["Completed job sheet in JobLog", "Price List sheet", "Work order number for agency jobs"],
+      "outputs": ["Tax invoice in Xero, emailed to the customer or agency"],
+      "evidence": ["T-0007", "T-0008", "T-0010", "T-0011", "T-0012", "T-0013", "T-0015", "D-01 p1", "D-02 p1", "D-03 p1", "D-04", "D-06", "D-09 s1"],
+      "confidence": "high"
+    },
+    {
+      "id": "TASK-002",
+      "name": "Chase overdue invoices",
+      "trigger": "Monday morning",
+      "frequency": { "cadence": "weekly", "detail": "Mondays" },
+      "currentOwner": "Priya Raman (office manager)",
+      "systems": ["Xero", "accounts inbox"],
+      "inputs": ["Aged receivables report"],
+      "outputs": ["Reminder emails sent", "Calls made to customers 30+ days overdue"],
+      "evidence": ["T-0017", "T-0018", "T-0019", "D-05"],
+      "confidence": "high"
+    },
+    {
+      "id": "TASK-003",
+      "name": "Resolve invoice disputes",
+      "trigger": "A customer questions or disputes a bill",
+      "frequency": { "cadence": "per_event" },
+      "currentOwner": "Dana Whitlock (owner)",
+      "systems": ["Xero", "phone"],
+      "inputs": ["The disputed invoice", "The customer's message"],
+      "outputs": ["Phone call with the customer", "Adjusted invoice if the bill was wrong"],
+      "evidence": ["T-0020", "T-0021", "D-08"],
+      "confidence": "medium"
+    },
+    {
+      "id": "TASK-004",
+      "name": "Prepare the weekly pay run",
+      "trigger": "Timesheets due Monday morning",
+      "frequency": { "cadence": "weekly", "detail": "Timesheets Monday, pay run Tuesday, pay day Wednesday" },
+      "currentOwner": "Priya Raman (office manager); Dana Whitlock approves",
+      "systems": ["Timesheet sheet", "JobLog", "Xero", "Xero app"],
+      "inputs": ["Timesheet sheet for the week", "Jobs per tech in JobLog"],
+      "outputs": ["Approved pay run in Xero"],
+      "evidence": ["T-0022", "T-0023", "T-0024", "T-0025", "T-0026", "T-0027", "T-0028", "D-09 s2"],
+      "confidence": "high"
+    },
+    {
+      "id": "TASK-005",
+      "name": "Match supplier bills to jobs",
+      "trigger": "Coastline Plumbing Supplies bills arrive at month end",
+      "frequency": { "cadence": "monthly" },
+      "currentOwner": "Priya Raman (office manager)",
+      "systems": ["JobLog", "Google Drive"],
+      "inputs": ["Coastline Plumbing Supplies monthly bills"],
+      "outputs": ["Bills matched to jobs; unmatched bills set aside"],
+      "evidence": ["T-0029", "T-0030", "D-07"],
+      "confidence": "low"
+    },
+    {
+      "id": "TASK-006",
+      "name": "Send monthly receipts to the bookkeeper",
+      "trigger": "End of the month",
+      "frequency": { "cadence": "monthly", "detail": "Last working day of the month" },
+      "currentOwner": "Priya Raman (office manager)",
+      "systems": ["Google Drive", "accounts inbox"],
+      "inputs": ["Receipts and supplier bills for the month"],
+      "outputs": ["Receipts/YYYY-MM folder in Google Drive", "Email to the bookkeeper"],
+      "evidence": ["T-0033", "D-07"],
+      "confidence": "high"
+    },
+    {
+      "id": "TASK-007",
+      "name": "Sign off the quarterly BAS",
+      "trigger": "Bookkeeper sends the prepared BAS",
+      "frequency": { "cadence": "quarterly" },
+      "currentOwner": "Dana Whitlock (owner)",
+      "systems": [],
+      "inputs": ["BAS prepared by the bookkeeper"],
+      "outputs": ["BAS approved for lodgement"],
+      "evidence": ["T-0033", "T-0034"],
+      "confidence": "medium"
+    },
+    {
+      "id": "TASK-008",
+      "name": "Lodge gas compliance certificates",
+      "trigger": "Any gas job is completed",
+      "frequency": { "cadence": "per_event" },
+      "currentOwner": "Dana Whitlock (owner)",
+      "systems": [],
+      "inputs": ["Completed gas job"],
+      "outputs": ["Lodged compliance certificate"],
+      "evidence": ["T-0035", "T-0036"],
+      "confidence": "low"
+    },
+    {
+      "id": "TASK-009",
+      "name": "Follow up sent quotes",
+      "trigger": "A quote has had no reply for a week",
+      "frequency": { "cadence": "per_event", "detail": "7 days after the quote is sent" },
+      "currentOwner": "Priya Raman (office manager)",
+      "systems": ["Xero", "accounts inbox"],
+      "inputs": ["Quotes sent from Xero"],
+      "outputs": ["Follow-up email, or a call from Dana for quotes over $10,000"],
+      "evidence": ["T-0037", "T-0038", "T-0039"],
+      "confidence": "high"
+    },
+    {
+      "id": "TASK-010",
+      "name": "Renew licences and insurance",
+      "trigger": "Renewal due dates",
+      "frequency": { "cadence": "annual" },
+      "currentOwner": "Priya Raman (office manager)",
+      "systems": [],
+      "inputs": ["Renewal dates for licences, public liability and vehicle insurance"],
+      "outputs": ["Renewed licences and policies"],
+      "evidence": ["T-0040", "T-0041", "T-0042"],
+      "confidence": "low"
+    }
+  ]
+}

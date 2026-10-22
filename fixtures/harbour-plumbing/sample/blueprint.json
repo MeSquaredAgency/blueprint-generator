@@ -1,0 +1,53 @@
+{
+  "clientId": "harbour-plumbing",
+  "clientName": "Harbour Plumbing & Gas",
+  "clientPrefix": "HBP",
+  "status": "draft",
+  "version": 1,
+  "versionDate": "2026-10-22",
+  "overview": {
+    "summary": "A Port Halyard plumbing and gas business doing mostly residential work, some strata work, and maintenance on rentals for real estate agents. The owner, three techs and an apprentice work in the field; an office manager runs the office three days a week and an external bookkeeper prepares the BAS.",
+    "industry": "Trades: residential and strata plumbing and gasfitting",
+    "services": ["Residential plumbing and gas", "Strata maintenance", "Rental maintenance for real estate agents"],
+    "teamSize": 6,
+    "approvals": [
+      { "what": "Weekly pay run", "approver": "Dana Whitlock" },
+      { "what": "Quarterly BAS before lodgement", "approver": "Dana Whitlock" },
+      { "what": "Sending overdue debts to the debt collector", "approver": "Dana Whitlock" },
+      { "what": "Follow-up on commercial quotes over $10,000", "approver": "Dana Whitlock" }
+    ]
+  },
+  "systems": [
+    { "name": "JobLog", "purpose": "Job management: job sheets, photos, parts used and hours", "usedBy": ["Techs", "Office manager"] },
+    { "name": "Xero", "purpose": "Invoices, quotes, aged receivables and payroll", "usedBy": ["Office manager", "Owner", "Bookkeeper"] },
+    { "name": "price list spreadsheet", "purpose": "Sell prices for parts and fees, and the weekly timesheet", "usedBy": ["Office manager", "Techs"] },
+    { "name": "Google Drive", "purpose": "Monthly Receipts folders for the bookkeeper", "usedBy": ["Office manager", "Bookkeeper"] },
+    { "name": "accounts inbox", "purpose": "Sending invoices, reminders and quote follow-ups", "usedBy": ["Office manager"] }
+  ],
+  "roles": [
+    { "name": "Owner", "holder": "Dana Whitlock", "responsibilities": ["Approves pay runs and the BAS", "Handles invoice disputes", "Lodges gas compliance certificates", "Decides on debt collection"] },
+    { "name": "Office manager", "holder": "Priya Raman", "responsibilities": ["Invoicing", "Chasing overdue invoices", "Pay run preparation", "Receipts for the bookkeeper", "Quote follow-ups"] },
+    { "name": "Techs and apprentice", "responsibilities": ["Close jobs in JobLog with parts and hours", "Submit timesheets by Monday morning"] },
+    { "name": "Bookkeeper (external)", "holder": "Sam Okafor", "responsibilities": ["Monthly reconciliation", "Prepares the quarterly BAS"] }
+  ],
+  "calendar": [
+    { "taskId": "TASK-002", "cadence": "weekly", "when": "Monday" },
+    { "taskId": "TASK-004", "cadence": "weekly", "when": "Timesheets Monday, pay run Tuesday, pay day Wednesday" },
+    { "taskId": "TASK-005", "cadence": "monthly", "when": "When Coastline bills arrive at month end" },
+    { "taskId": "TASK-006", "cadence": "monthly", "when": "Last working day of the month" },
+    { "taskId": "TASK-007", "cadence": "quarterly" },
+    { "taskId": "TASK-010", "cadence": "annual" }
+  ],
+  "routing": [
+    { "taskId": "TASK-001", "sopId": "HBP-FIN-001", "route": "operator", "rationale": "Rule-based and high volume; needs judgement only on agency and strata references, which the SOP covers" },
+    { "taskId": "TASK-002", "sopId": "HBP-FIN-002", "route": "operator", "rationale": "Weekly and repeatable; the debt collection decision stays with Dana" },
+    { "taskId": "TASK-003", "route": "client_retained", "rationale": "Dana wants disputes handled personally by phone" },
+    { "taskId": "TASK-004", "route": "operator", "rationale": "Operator prepares and checks timesheets against JobLog; Dana approves" },
+    { "taskId": "TASK-005", "route": "operator", "rationale": "Not yet described; to be walked through in interview two" },
+    { "taskId": "TASK-006", "route": "automation", "rationale": "Folder creation and the notification email are fixed steps each month" },
+    { "taskId": "TASK-007", "route": "client_retained", "rationale": "Dana signs off every lodgement" },
+    { "taskId": "TASK-008", "route": "client_retained", "rationale": "Licensed work; Dana does it personally" },
+    { "taskId": "TASK-009", "sopId": "HBP-SAL-001", "route": "ai_role", "rationale": "Drafting follow-ups is routine writing; an operator sends, and Dana rings commercial quotes" },
+    { "taskId": "TASK-010", "route": "operator", "rationale": "Dates live in the office manager's head; an operator can hold the renewal calendar once captured" }
+  ]
+}

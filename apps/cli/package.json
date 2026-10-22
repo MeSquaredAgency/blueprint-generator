@@ -1,0 +1,9 @@
+{
+  "name": "@me2/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@me2/core": "0.1.0"
+  }
+}

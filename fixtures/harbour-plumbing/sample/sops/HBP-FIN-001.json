@@ -1,0 +1,57 @@
+{
+  "id": "HBP-FIN-001",
+  "title": "Invoice completed jobs",
+  "taskId": "TASK-001",
+  "trigger": "A tech closes a job in JobLog",
+  "frequency": { "cadence": "per_event", "detail": "The morning after the job is closed" },
+  "owner": "operator",
+  "contributors": ["client_retained"],
+  "systems": [
+    { "name": "JobLog", "kind": "app" },
+    { "name": "Xero", "kind": "app" },
+    { "name": "price list spreadsheet", "kind": "other" },
+    { "name": "accounts inbox", "kind": "login" }
+  ],
+  "inputs": [
+    { "item": "Completed job with photos, parts used and hours", "source": "JobLog" },
+    { "item": "Sell prices for parts and fees", "source": "Price List sheet in the price list spreadsheet" },
+    { "item": "Work order number (agency jobs only)", "source": "The property manager's work order email" }
+  ],
+  "outputs": [
+    { "item": "Tax invoice", "destination": "Emailed from the accounts inbox to the customer, or to the agency's accounts address for agency jobs" }
+  ],
+  "steps": [
+    { "n": 1, "actor": "operator", "action": "Open the completed jobs list", "system": "JobLog", "evidence": ["T-0008"] },
+    { "n": 2, "actor": "operator", "action": "Create an invoice for each completed job", "system": "Xero", "evidence": ["T-0008"] },
+    { "n": 3, "actor": "operator", "action": "Price each part from the Sell ex GST column of the Price List sheet, not from the price the tech entered", "system": "price list spreadsheet", "evidence": ["T-0008", "D-09 s1"] },
+    { "n": 4, "actor": "operator", "action": "Add the call-out fee (after-hours call-out fee for after-hours jobs) and labour hours at the standard rate", "system": "Xero", "evidence": ["T-0010", "D-09 s1", "D-03 p1"] },
+    { "n": 5, "actor": "operator", "action": "Set the due date to 7 days after the invoice date", "system": "Xero", "evidence": ["D-01 p1", "D-02 p1", "D-03 p1"] },
+    { "n": 6, "actor": "operator", "action": "Email the invoice from the accounts inbox using the Xero invoice email template", "system": "Xero", "evidence": ["T-0011", "D-04"] },
+    { "n": 7, "actor": "operator", "action": "Mark the job as invoiced", "system": "JobLog", "evidence": "ASSUMED" }
+  ],
+  "decisionPoints": [
+    { "condition": "The job is for a real estate agency", "action": "Bill the agency, not the tenant; put the work order number in the reference and send to the agency's accounts address", "evidence": ["T-0012", "D-02 p1", "D-06"] },
+    { "condition": "The job is strata work", "action": "Put the strata plan number in the reference", "evidence": ["T-0013", "D-03 p1"] },
+    { "condition": "An emergency agency call-out has no work order yet", "action": "Email the property manager for a work order number before sending the invoice", "evidence": ["T-0013"] },
+    { "condition": "The tech hasn't entered the parts used", "action": "Ring the tech for the parts before invoicing", "evidence": ["T-0015"] }
+  ],
+  "qualityChecks": [
+    "Every part code on the invoice appears in the Price List sheet at the same Sell ex GST price",
+    "Agency invoices show the work order number in the Reference field",
+    "The invoice shows as Sent in Xero to the customer's or agency's email address"
+  ],
+  "escalation": [
+    { "topic": "money", "when": "An agency job's total is over the approval limit on the work order", "contact": "Dana Whitlock" },
+    { "topic": "legal", "when": "A customer mentions a lawyer, a tribunal or a formal complaint body", "contact": "Dana Whitlock" },
+    { "topic": "complaints", "when": "A customer is unhappy with or disputes the bill", "contact": "Dana Whitlock" }
+  ],
+  "templates": [
+    { "name": "Invoice email", "kind": "email", "link": "Xero invoice email template", "evidence": ["D-04"] },
+    { "name": "Tax invoice layout", "kind": "invoice", "link": "Xero invoice template", "evidence": ["D-01 p1"] }
+  ],
+  "scoring": { "minutesPerRun": 8, "repeatability": 5, "manualTime": 4, "buildEffort": 3 },
+  "status": "draft",
+  "version": 1,
+  "versionDate": "2026-10-22",
+  "reviewBy": "2027-04-22"
+}

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+out/
+
+# Secrets: the API key comes from the environment only.
+.env
+.env.*
+!.env.example
+
+# Real client data never enters the repo. Only fixtures/ is committed.
+clients/
+*.client/
+
+# Raw recordings, wherever they land.
+*.wav
+*.mp3
+*.m4a

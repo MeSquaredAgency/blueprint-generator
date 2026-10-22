@@ -1,0 +1,54 @@
+{
+  "clientId": "harbour-plumbing",
+  "clientName": "Harbour Plumbing & Gas",
+  "version": 1,
+  "blueprintVersion": 1,
+  "compiledOn": "2026-10-22",
+  "business": "Harbour Plumbing & Gas is a Port Halyard plumbing and gas business doing mostly residential work, some strata work, and maintenance on rentals for real estate agents. Dana Whitlock (owner) works with three techs and an apprentice; Priya Raman runs the office three days a week, and Sam Okafor is the external bookkeeper. Dana approves the pay run, the BAS, debt collection and any follow-up on commercial quotes over $10,000.",
+  "voice": {
+    "greetings": ["Hi {first name},"],
+    "signOffs": ["Cheers,\nPriya\nHarbour Plumbing & Gas"],
+    "formality": "neutral",
+    "useWords": ["friendly reminder", "just give me a call", "Cheers"],
+    "avoidWords": [],
+    "examples": [
+      {
+        "text": "Hi [CUSTOMER_1],\n\nThanks for having us out on Tuesday. Please find attached invoice INV-2041 for $412.50 (inc GST) for the hot water service repair at [ADDRESS_1].\n\nPayment is due by 30 September. Bank details are on the invoice.\n\nAny questions, just give me a call on (08) 5550 1234.\n\nCheers,\nPriya\nHarbour Plumbing & Gas",
+        "evidence": ["D-04"]
+      },
+      {
+        "text": "Hi [CUSTOMER_2],\n\nJust a friendly reminder that invoice INV-2032 for $286.00 was due on 21 September and is now a week overdue. I've attached a copy in case it got lost.\n\nIf you've already paid, please ignore this, and thank you!\n\nCheers,\nPriya\nHarbour Plumbing & Gas",
+        "evidence": ["D-05"]
+      },
+      {
+        "text": "Hi [BOOKKEEPER_1],\n\nSeptember's receipts and the Coastline bills are in the Receipts/2026-09 folder in Drive. There are two Coastline bills I couldn't match to jobs, so I've put them in a subfolder called 'unmatched'.\n\nCheers,\nPriya\nHarbour Plumbing & Gas",
+        "evidence": ["D-07"]
+      }
+    ]
+  },
+  "drafts": [
+    {
+      "sopId": "HBP-SAL-001",
+      "trigger": "A quote sent from Xero has had no reply for 7 days",
+      "inputs": ["Quote number", "Customer first name", "Quote total inc GST", "Job description"],
+      "outputFormat": "Plain-text email for the accounts inbox, under 120 words",
+      "qualityChecks": ["Quote number and total match Xero exactly", "No quote over $10,000 is drafted; it is flagged to Dana instead"]
+    }
+  ],
+  "complianceRules": ["Never say that gas work is compliant or certified; compliance certificates are Dana's"],
+  "stopAndFlag": [
+    "Any overdue amount over $2,000 that is more than 45 days old",
+    "Any customer unhappy with a bill or a quote",
+    "Any mention of lawyers, a tribunal or debt collectors",
+    "Commercial quotes over $10,000",
+    "Anything not covered above"
+  ],
+  "glossary": [
+    { "term": "JobLog", "meaning": "The job management app the techs use on their phones" },
+    { "term": "WO", "meaning": "Work order number from a real estate agency; must be on agency invoices" },
+    { "term": "SP", "meaning": "Strata plan number; goes in the reference on strata invoices" },
+    { "term": "Coastline", "meaning": "Coastline Plumbing Supplies, the main parts supplier, on monthly account" },
+    { "term": "BAS", "meaning": "Business activity statement, prepared quarterly by the bookkeeper and signed off by Dana" },
+    { "term": "TAFE days", "meaning": "The apprentice's paid training days, which don't appear in JobLog" }
+  ]
+}

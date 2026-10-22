@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "clientId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^TASK-\\d{3,}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "frequency": {
+            "type": "object",
+            "properties": {
+              "cadence": {
+                "type": "string",
+                "enum": [
+                  "daily",
+                  "weekly",
+                  "fortnightly",
+                  "monthly",
+                  "quarterly",
+                  "annual",
+                  "per_event",
+                  "ad_hoc",
+                  "unknown"
+                ]
+              },
+              "detail": {
+                "description": "e.g. 'first business day of the month', 'after every completed job'",
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "cadence"
+            ],
+            "additionalProperties": false
+          },
+          "currentOwner": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Who does it today, as the client describes them"
+          },
+          "systems": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "outputs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "evidence": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^(T-\\d{4,}|D-\\d{2,}( [ps][1-9]\\d*)?)$"
+            }
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "trigger",
+          "frequency",
+          "currentOwner",
+          "systems",
+          "inputs",
+          "outputs",
+          "evidence",
+          "confidence"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "clientId",
+    "tasks"
+  ],
+  "additionalProperties": false
+}

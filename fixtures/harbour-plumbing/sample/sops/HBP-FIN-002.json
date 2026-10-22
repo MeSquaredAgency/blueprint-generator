@@ -1,0 +1,45 @@
+{
+  "id": "HBP-FIN-002",
+  "title": "Chase overdue invoices",
+  "taskId": "TASK-002",
+  "trigger": "Monday morning",
+  "frequency": { "cadence": "weekly", "detail": "Mondays" },
+  "owner": "operator",
+  "contributors": ["client_retained"],
+  "systems": [
+    { "name": "Xero", "kind": "app" },
+    { "name": "accounts inbox", "kind": "login" }
+  ],
+  "inputs": [{ "item": "Aged receivables report", "source": "Xero" }],
+  "outputs": [
+    { "item": "Reminder emails", "destination": "Sent from the accounts inbox to each customer 7–29 days overdue" },
+    { "item": "Call notes", "destination": "Against the invoice in Xero" }
+  ],
+  "steps": [
+    { "n": 1, "actor": "operator", "action": "Run the aged receivables report", "system": "Xero", "evidence": ["T-0017"] },
+    { "n": 2, "actor": "operator", "action": "Send the friendly reminder email, with the invoice attached, for each invoice 7 to 29 days overdue", "system": "accounts inbox", "evidence": ["T-0017", "D-05"] },
+    { "n": 3, "actor": "operator", "action": "Phone the customer for each invoice 30 or more days overdue", "evidence": ["T-0018"] },
+    { "n": 4, "actor": "operator", "action": "Note the outcome of each call against the invoice", "system": "Xero", "evidence": "ASSUMED" }
+  ],
+  "decisionPoints": [
+    { "condition": "The invoice is over $2,000 and more than 45 days overdue", "action": "Don't contact the customer; pass it to Dana, who decides between the debt collector and a call", "evidence": ["T-0019"] },
+    { "condition": "The customer says they've already paid", "action": "Check the payment has been received before contacting them again", "evidence": "ASSUMED" }
+  ],
+  "qualityChecks": [
+    "Every invoice 7–29 days overdue on Monday's report has a reminder email in the accounts inbox Sent folder dated that Monday",
+    "Every invoice over $2,000 and 45+ days overdue has a note that it was passed to Dana"
+  ],
+  "escalation": [
+    { "topic": "money", "when": "An invoice is over $2,000 and more than 45 days overdue", "contact": "Dana Whitlock" },
+    { "topic": "legal", "when": "A customer mentions a lawyer, a tribunal or a debt collector", "contact": "Dana Whitlock" },
+    { "topic": "complaints", "when": "A customer disputes the bill instead of paying", "contact": "Dana Whitlock" }
+  ],
+  "templates": [
+    { "name": "Friendly reminder email", "kind": "email", "link": "accounts inbox canned response", "evidence": ["D-05"] }
+  ],
+  "scoring": { "minutesPerRun": 30, "repeatability": 5, "manualTime": 3, "buildEffort": 2 },
+  "status": "draft",
+  "version": 1,
+  "versionDate": "2026-10-22",
+  "reviewBy": "2027-04-22"
+}

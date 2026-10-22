@@ -11,4 +11,15 @@ npm run check   # typecheck + tests
 
 Requires Node 22.18 or later.
 
-**Status:** Phase 1 (Foundations): schemas, fixture client, tests and CI.
+## Run it
+
+```sh
+npm run blueprint -- run --client harbour-plumbing          # stops for redaction review
+npm run blueprint -- confirm-redaction --client harbour-plumbing --by "Your Name"
+npm run blueprint -- run --client harbour-plumbing          # finishes the run
+```
+
+Outputs land in `out/harbour-plumbing/`. Model calls need `ME2_ANTHROPIC_API_KEY` in the
+environment; responses are cached, so a re-run on unchanged input makes no calls.
+
+**Status:** Phase 2 (CLI pipeline, end to end).

@@ -13,10 +13,7 @@
     "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "types": []
+    "types": ["node"]
   },
-  // Only code that runs without Node globals is type-checked for now. Tests and
-  // scripts run through Node's built-in type stripping; checking them needs
-  // @types/node, which the plan doesn't name (see CLAUDE.md).
-  "include": ["packages/*/src/**/*.ts", "apps/*/src/**/*.ts"]
+  "include": ["packages/*/src/**/*.ts", "packages/*/test/**/*.ts", "packages/*/scripts/**/*.ts", "apps/*/src/**/*.ts"]
 }

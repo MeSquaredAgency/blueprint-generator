@@ -5,5 +5,8 @@
   "type": "module",
   "dependencies": {
     "@me2/core": "0.1.0"
+  },
+  "bin": {
+    "blueprint": "./src/main.ts"
   }
 }

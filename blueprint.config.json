@@ -1,0 +1,15 @@
+{
+  "apiKeyEnv": "ME2_ANTHROPIC_API_KEY",
+  "stages": {
+    "prepare": { "model": "claude-opus-5-5", "effort": "medium" },
+    "redact": { "model": "claude-haiku-5-5", "effort": "low" },
+    "extract": { "model": "claude-opus-5-5", "effort": "high" },
+    "reconcile": { "model": "claude-opus-5-5", "effort": "high" },
+    "draftSop": { "model": "claude-opus-5-5", "effort": "high" },
+    "voice": { "model": "claude-opus-5-5", "effort": "medium" }
+  },
+  "maxTokens": 64000,
+  "concurrency": 4,
+  "refusalFallback": true,
+  "sopReviewMonths": 6
+}

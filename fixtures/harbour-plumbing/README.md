@@ -35,5 +35,5 @@ Document IDs follow sorted filename order, which the `NN-` prefixes make explici
 
 Hand-written examples of every pipeline output, used to test the schemas. They are
 **not** the Phase 3 golden task list, which is written separately by hand.
-`sample/evidence.json` was produced from the raw files above (pdftotext, Python's email
-parser and openpyxl); Phase 2's Ingest stage may regenerate it.
+`sample/evidence.json` is the Ingest stage's output for the raw files above; a test
+fails if they drift apart. Regenerate it with `npm run fixture:evidence`.
